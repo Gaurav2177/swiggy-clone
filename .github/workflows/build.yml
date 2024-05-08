@@ -36,8 +36,8 @@ jobs:
    steps:
       - name: docker pull image
         run: docker pull gaurav2177/swiggy-repo:latest
-      - name: Image scan
-        run: trivy image gaurav2177/swiggy-repo:latest > trivyimagedeploy.txt
+      
+      
       - name: Deploy to container
         run: docker run -d --name swiggy-clone -p 3000:3000 gaurav2177/swiggy-repo:latest
       # If you wish to fail your job when the Quality Gate is red, uncomment the
